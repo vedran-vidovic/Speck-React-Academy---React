@@ -1,0 +1,28 @@
+.hero-section {
+  /*filling the section with the desired image*/
+  background: url("../../assets/event.jpg") rgba(0, 0, 0, 0.69);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: multiply;
+  background-attachment: fixed;
+  height: 550px;
+  position: relative;
+  margin-top: 80px;
+}
+
+.hero-container {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  text-align: center;
+  width: 400px;
+  height: 250px;
+  border-radius: 15px;
+  padding: 20px;
+
+  /*centering the container*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

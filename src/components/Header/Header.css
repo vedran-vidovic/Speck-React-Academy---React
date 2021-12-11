@@ -1,0 +1,44 @@
+.header-main {
+  background-color: white;
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.logo-image img {
+  width: 80px;
+  height: 50px;
+  float: left;
+  margin-top: 15px;
+}
+
+.navigation-menu {
+  float: right;
+}
+
+.navigation-menu ul {
+  list-style: none;
+}
+
+.navigation-menu ul li {
+  display: inline-block;
+  line-height: 50px;
+  margin-right: 50px;
+}
+
+.navigation-menu ul li a {
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  transition: color 0.3s ease-out;
+}
+.navigation-menu ul li a:hover {
+  color: #c59613;
+}
