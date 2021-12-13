@@ -6,7 +6,7 @@ import Cards from "../components/Cards/Cards.js";
 const Speakers = () => {
   return (
     <>
-      <h1>Sudionici</h1>
+      <h1 className="title">Sudionici</h1>
       <CardsList>
         <Cards type="speaker" />
         <Cards type="speaker" />

@@ -9,15 +9,15 @@ import "./Cards.css";
 const Cards = (props) => {
   if (props.type === "event") {
     return (
-      <div class="info-box">
-        <div class="info-box-header">
-          <div class="event-icon">
+      <div className="info-box">
+        <div className="info-box-header">
+          <div className="event-icon">
             <img src={eventicon} alt="event" />
           </div>
           <h3>How can we benefit from React Redux</h3>
         </div>
 
-        <div class="info-box-time-place">
+        <div className="info-box-time-place">
           <div>
             <img src={location} alt="location" />
             <p>Dvorana D09</p>
@@ -28,7 +28,7 @@ const Cards = (props) => {
           </div>
         </div>
 
-        <div class="info-box-paragraph-container">
+        <div className="info-box-paragraph-container">
           <p>
             Latin literature from 45 BC, making it over 2000 years old. Richard
             McClintock, a Latin professor at Hampden-Sydney College in Virginia,
@@ -40,15 +40,15 @@ const Cards = (props) => {
     );
   } else if (props.type === "speaker") {
     return (
-      <div class="info-box">
-        <div class="info-box-header-speakers">
-          <div class="speakers-icon">
+      <div className="info-box">
+        <div className="info-box-header-speakers">
+          <div className="speakers-icon">
             <img src={speaker} alt="speaker" />
           </div>
           <h3>Johan Bach</h3>
         </div>
 
-        <div class="info-box-paragraph-container">
+        <div className="info-box-paragraph-container">
           <p>
             Latin literature from 45 BC, making it over 2000 years old. Richard
             McClintock, a Latin professor at Hampden-Sydney College in Virginia,

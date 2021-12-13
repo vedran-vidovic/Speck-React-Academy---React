@@ -5,9 +5,9 @@ import lastyear from "../../assets/last-year.jpg";
 
 const LastYear = () => {
   return (
-    <section class="last-year-section">
+    <section className="last-year-section">
       <h2>FOI tjedan karijera 2019</h2>
-      <div class="last-container">
+      <div className="last-container">
         <p>
           Contrary to popular belief, Lorem Ipsum is not simply random text. It
           has roots in a piece of classical Latin literature from 45 BC, making

@@ -9,8 +9,8 @@ import partner from "../../assets/partner.jpg";
 
 const More = () => {
   return (
-    <section class="more-section">
-      <div class="more-container">
+    <section className="more-section">
+      <div className="more-container">
         <p>
           Contrary to popular belief, Lorem Ipsum is not simply random text. It
           has roots in a piece of classical Latin literature from 45 BC, making
@@ -24,23 +24,23 @@ const More = () => {
         <Button text="Saznaj više" />
       </div>
 
-      <div class="cards-container">
-        <a href="#" class="card">
+      <div className="cards-container">
+        <a href="#" className="card">
           <img src={about} alt="about" />
           <p>O tjednu karijera</p>
         </a>
 
-        <a href="#" class="card">
+        <a href="#" className="card">
           <img src={speakers} alt="speakers" />
           <p>Izlagači</p>
         </a>
 
-        <a href="#" class="card">
+        <a href="#" className="card">
           <img src={calendar} alt="calendar" />
           <p>Kalendar</p>
         </a>
 
-        <a href="#" class="card">
+        <a href="#" className="card">
           <img src={partner} alt="partner" />
           <p>Partneri</p>
         </a>

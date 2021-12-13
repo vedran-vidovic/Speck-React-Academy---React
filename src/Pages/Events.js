@@ -6,7 +6,7 @@ import Cards from "../components/Cards/Cards.js";
 const Events = () => {
   return (
     <>
-      <h1>Događadnja</h1>
+      <h1 className="title">Događadnja</h1>
       <CardsList>
         <Cards type="event" />
         <Cards type="event" />

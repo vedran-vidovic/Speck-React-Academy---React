@@ -6,7 +6,7 @@ import "./CardsList.css";
 const EventsList = (props) => {
   return (
     <>
-      <div class="component-container">{props.children}</div>
+      <div className="component-container">{props.children}</div>
     </>
   );
 };
