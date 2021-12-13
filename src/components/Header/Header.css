@@ -12,7 +12,7 @@
   margin: 0 auto;
 }
 
-.logo-image img {
+.LogoContainer img {
   width: 80px;
   height: 50px;
   float: left;
@@ -33,12 +33,12 @@
   margin-right: 50px;
 }
 
-.navigation-menu ul li a {
+.HeaderMain-NavLink {
   font-size: 17px;
   font-weight: 700;
   letter-spacing: 0.02em;
   transition: color 0.3s ease-out;
 }
-.navigation-menu ul li a:hover {
+.HeaderMain-NavLink:hover {
   color: #c59613;
 }

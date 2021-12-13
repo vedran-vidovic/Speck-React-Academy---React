@@ -1,0 +1,46 @@
+h1 {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.component-container {
+  display: grid;
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 575px) {
+  .component-container {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .info-box {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .component-container {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: fit-content;
+  }
+
+  .info-box {
+    margin: inherit;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .component-container {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    max-width: 1024px;
+  }
+}

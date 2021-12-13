@@ -1,27 +1,32 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import "./Header.css";
 import logo from "../../assets/logo.png";
+
+const links = {
+  speakers: "Speakers",
+  events: "Events",
+};
 
 const Header = () => {
   return (
     <header class="header-main">
       <div class="header-container">
-        <a href="index.html" class="logo-image">
+        <Link to="/" className="LogoContainer">
           <img src={logo} alt="Logo" />
-        </a>
+        </Link>
         <nav class="navigation-menu">
           <ul>
             <li>
-              <a href="#">Za poslodavce</a>
+              <Link className="HeaderMain-NavLink" to="/events">
+                Događanja
+              </Link>
             </li>
             <li>
-              <a href="#">Događanja</a>
-            </li>
-            <li>
-              <a href="#">Kontakt</a>
-            </li>
-            <li>
-              <a href="#">Prijavi se</a>
+              <Link className="HeaderMain-NavLink" to="/speakers">
+                Sudionici
+              </Link>
             </li>
           </ul>
         </nav>
