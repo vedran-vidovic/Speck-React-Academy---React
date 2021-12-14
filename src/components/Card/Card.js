@@ -4,7 +4,7 @@ import time from "../../assets/time-icon.png";
 import location from "../../assets/location-icon.png";
 import speaker from "../../assets/speakers-icon.png";
 
-import "./Cards.css";
+import "./Card.css";
 
 const Cards = (props) => {
   if (props.type === "event") {
@@ -14,26 +14,22 @@ const Cards = (props) => {
           <div className="event-icon">
             <img src={eventicon} alt="event" />
           </div>
-          <h3>How can we benefit from React Redux</h3>
+          <h3>{props.title}</h3>
         </div>
 
         <div className="info-box-time-place">
           <div>
             <img src={location} alt="location" />
-            <p>Dvorana D09</p>
+            <p>{props.location}</p>
           </div>
           <div>
             <img src={time} alt="time" />
-            <p>24.3 u 13:45h</p>
+            <p>{props.dateTime}</p>
           </div>
         </div>
 
         <div className="info-box-paragraph-container">
-          <p>
-            Latin literature from 45 BC, making it over 2000 years old. Richard
-            McClintock, a Latin professor at Hampden-Sydney College in Virginia,
-            looked up one.
-          </p>
+          <p>{props.about}</p>
         </div>
         <a href="#">Prijavi se na predavanje </a>
       </div>
@@ -45,15 +41,11 @@ const Cards = (props) => {
           <div className="speakers-icon">
             <img src={speaker} alt="speaker" />
           </div>
-          <h3>Johan Bach</h3>
+          <h3>{props.name}</h3>
         </div>
 
         <div className="info-box-paragraph-container">
-          <p>
-            Latin literature from 45 BC, making it over 2000 years old. Richard
-            McClintock, a Latin professor at Hampden-Sydney College in Virginia,
-            looked up one.
-          </p>
+          <p>{props.about}</p>
         </div>
         <a href="#">Prati Sudionika</a>
       </div>
