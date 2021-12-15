@@ -11,12 +11,14 @@ let loading = true;
 const Events = () => {
   const [events, setEvents] = useState(eventsArray);
   const [userInput, setUserInput] = useState("");
-  const [filteredEvents, setFilteredEvents] = useState(eventsArray);
+  const [filteredEvents, setFilteredEvents] = useState([]);
   //loading
   useEffect(() => {
+    loading = true;
     const timer = setTimeout(() => {
       loading = false;
-    }, 1000);
+      setFilteredEvents(eventsArray);
+    }, 500);
     return () => clearTimeout(timer);
   }, []);
   //filter items out of the array
@@ -28,37 +30,32 @@ const Events = () => {
     );
   }, [userInput]);
 
-  if (loading === true) {
+  const displayEvents = () => {
     return (
-      <>
-        <h1 className="title">Događanja</h1>
-        <Loader />
-      </>
+      <CardsList>
+        {filteredEvents.map((event) => (
+          <Card
+            key={event.id}
+            type="event"
+            title={event.title}
+            location={event.location}
+            dateTime={event.dateTime}
+            about={event.about}
+          />
+        ))}
+      </CardsList>
     );
-  } else {
-    return (
-      <>
-        <h1 className="title">Događadnja</h1>
-        <SearchBar
-          placeholder="Search events..."
-          getUserInput={(e) => setUserInput(e.target.value)}
-        />
-
-        <CardsList>
-          {filteredEvents.map((event) => (
-            <Card
-              key={event.id}
-              type="event"
-              title={event.title}
-              location={event.location}
-              dateTime={event.dateTime}
-              about={event.about}
-            />
-          ))}
-        </CardsList>
-      </>
-    );
-  }
+  };
+  return (
+    <>
+      <h1 className="title">Događanja</h1>
+      <SearchBar
+        placeholder="Search events..."
+        getUserInput={(e) => setUserInput(e.target.value)}
+      />
+      {loading ? <Loader /> : displayEvents()}
+    </>
+  );
 };
 
 export default Events;
